@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnippingToolGPT</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SnippingToolGPT</h1>
+    <div id="mainMenu">
+      <button id="captureBtn" class="btn primary">Capture Screenshot</button>
+      <button id="apiKeyBtn" class="btn secondary">Set OpenAI API Key</button>
+      <button id="historyBtn" class="btn secondary">View History</button>
+    </div>
+    <div id="apiKeyMenu" style="display: none;">
+      <label for="apiKey">OpenAI API Key:</label>
+      <input type="password" id="apiKey" placeholder="Enter your API key">
+      <button id="saveApiKey" class="btn primary">Save API Key</button>
+      <button id="backToMain" class="btn secondary">Back to Main Menu</button>
+    </div>
+    <div id="historyMenu" style="display: none;">
+      <h2>Screenshot History</h2>
+      <ul id="historyList"></ul>
+      <button id="clearHistory" class="btn danger">Clear History</button>
+      <button id="backToMainFromHistory" class="btn secondary">Back to Main Menu</button>
+    </div>
+    <p id="apiKeyStatus"></p>
+    <p id="errorMessage" class="error" style="display: none;"></p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
